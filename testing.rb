@@ -1,7 +1,7 @@
 require 'pry'
 
 class Dog
-  attr_accessor :name, :breed, :age 
+  attr_accessor :name, :breed, :age
 
   @@all=[]
 
@@ -12,9 +12,14 @@ class Dog
 
   def self.all
     @@all.each do |d|
-      puts d.name 
+      puts d.name
     end
   end
+
+  def self.clear_all
+    @@all.clear
+  end
+
 end
 
 dog1=Dog.new("Foxy")
